@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undangan Pernikahan — Afrisa & Naufal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg">
+    <main class="card" role="main" aria-labelledby="couple">
+      <header class="header-ornament" aria-hidden="true">
+        <svg class="orn" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 25 C30 5, 70 5, 100 25 C130 45, 170 45, 200 25" fill="none" stroke="#b48a44" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </header>
+
+      <section class="hero">
+        <h1 id="couple" class="couple">
+          <span class="first">Afrisa</span>
+          <span class="amp">&amp;</span>
+          <span class="second">Naufal</span>
+        </h1>
+
+        <p class="invitation-line">Dengan penuh rasa syukur kami mengundang Anda untuk hadir pada acara pernikahan kami</p>
+
+        <div class="details">
+          <div class="detail-row"><strong>Tempat:</strong> Nk Cafe</div>
+          <div class="detail-row"><strong>Waktu:</strong> 09.00</div>
+          <div class="detail-row"><strong>Tanggal:</strong> 1 Februari 2026</div>
+        </div>
+
+        <div class="guest" id="guest">Kepada Yth. <span id="guestName">Tamu Terhormat</span></div>
+
+        <div class="controls">
+          <button id="playBtn" class="btn">Putar Gending</button>
+          <a id="mapsOpen" class="btn ghost" target="_blank" rel="noopener">Buka di Maps</a>
+          <button id="copyBtn" class="btn ghost">Salin Link Undangan</button>
+        </div>
+      </section>
+
+      <section class="map-section" aria-label="Lokasi">
+        <h2 class="sr-only">Lokasi</h2>
+        <div class="map-wrap">
+          <!-- Embed peta (search Nk Cafe) untuk tampilan peta di undangan -->
+          <iframe
+            id="gmap"
+            src="https://www.google.com/maps?q=Nk+Cafe&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Nk Cafe"></iframe>
+        </div>
+      </section>
+
+      <!-- Pemutar YouTube placeholder; iframe dibuat dinamis oleh script.js -->
+      <div id="youtube-player" style="display:none;"></div>
+
+      <footer class="footer-note">
+        <p>Mohon konfirmasi kehadiran via pesan. Terima kasih.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
