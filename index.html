@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undangan Pernikahan — Afrisa & Naufal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#acara">Rangkaian</a>
+      <a href="#cerita">Cerita</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero section-animate">
+      <div class="hero-inner">
+        <h1 class="couple">Afrisa <span class="amp">&amp;</span> Naufal</h1>
+        <p class="subtitle">Dengan penuh rasa syukur kami mengundang Anda untuk hadir</p>
+        <div class="meta">
+          <div><strong>Tempat</strong><span>Nk Cafe</span></div>
+          <div><strong>Waktu</strong><span>09.00</span></div>
+          <div><strong>Tanggal</strong><span>1 Feb 2026</span></div>
+        </div>
+
+        <p class="guest">Kepada Yth. <span id="guestName">Tamu Terhormat</span></p>
+
+        <div class="hero-actions">
+          <a href="#acara" class="btn">Lihat Rangkaian</a>
+          <a id="mapsBtn" class="btn ghost" target="_blank" rel="noopener">Buka di Maps</a>
+        </div>
+      </div>
+
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg"><path d="M0 40 C40 0, 80 0, 120 40 C160 80, 200 80, 240 40" fill="none" stroke="#b48a44" stroke-width="2"/></svg>
+      </div>
+    </section>
+
+    <section id="acara" class="section section-animate">
+      <div class="container">
+        <h2 class="section-title" data-animate>Rangkaian Acara</h2>
+        <ul class="timeline">
+          <li data-animate><strong>Akad</strong><span>09.00</span></li>
+          <li data-animate><strong>Resepsi</strong><span>10.30</span></li>
+          <li data-animate><strong>Doa & Sambutan</strong><span>12.00</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cerita" class="section section-animate">
+      <div class="container">
+        <h2 class="section-title" data-animate>Cerita Singkat</h2>
+        <p class="story" data-animate>
+          Kami berharap kehadiran Anda menjadi berkah. Semoga kebersamaan dan doa Anda melengkapi hari bahagia kami.
+        </p>
+      </div>
+    </section>
+
+    <section id="lokasi" class="section section-animate">
+      <div class="container">
+        <h2 class="section-title" data-animate>Lokasi</h2>
+        <div class="map-grid" data-animate>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps?q=Nk+Cafe&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lokasi Nk Cafe"></iframe>
+          </div>
+          <div class="map-info">
+            <p><strong>Nk Cafe</strong></p>
+            <p>Jalan ... (isi alamat lengkap jika ada)</p>
+            <a id="mapsOpen" class="btn ghost" target="_blank" rel="noopener">Buka di Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" class="section section-animate">
+      <div class="container">
+        <h2 class="section-title" data-animate>Galeri</h2>
+        <div class="gallery" data-animate>
+          <div class="photo placeholder">Foto 1</div>
+          <div class="photo placeholder">Foto 2</div>
+          <div class="photo placeholder">Foto 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section section-animate">
+      <div class="container">
+        <h2 class="section-title" data-animate>Konfirmasi Kehadiran</h2>
+        <form id="rsvpForm" data-animate>
+          <label>Nama
+            <input id="rsvpName" type="text" placeholder="Nama Anda" required>
+          </label>
+          <label>Kehadiran
+            <select id="rsvpAttend">
+              <option value="hadir">Hadir</option>
+              <option value="tidak">Tidak Hadir</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Kirim</button>
+        </form>
+        <p id="rsvpMsg" class="muted"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle music">♪</button>
+  <div id="musicToast" class="music-toast" role="status" aria-live="polite">Musik diputar</div>
+
+  <!-- YouTube player fallback (created dynamically) -->
+  <div id="youtube-player" style="display:none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
